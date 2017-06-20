@@ -83,7 +83,6 @@
     vm.openCalendar = openCalendar;
     vm.changeIDWPower = changeIDWPower;
     vm.changeNumTimeSteps = changeNumTimeSteps;
-    vm.selectExposure = selectExposure;
     vm.closeSidebar = closeSidebar;
     vm.closeAlert = closeAlert;
     vm.showRemoveInterpolation = showRemoveInterpolation;
@@ -151,10 +150,6 @@
       if (newValue >= vm.settings.minNumTimeSteps && newValue <= vm.settings.maxNumTimeSteps) {
         vm.settings.numTimeSteps += number;
       }
-    }
-
-    function selectExposure (exposure) {
-      vm.settings.exposure = exposure;
     }
 
     function clearInterpolation () {
