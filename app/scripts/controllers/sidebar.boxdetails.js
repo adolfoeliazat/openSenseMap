@@ -78,8 +78,8 @@
 
     function focusSelectedBox () {
       var markerLatLng = [
-        vm.selectedMarker.loc[0].geometry.coordinates[1],
-        vm.selectedMarker.loc[0].geometry.coordinates[0]
+        vm.selectedMarker.location.loc.coordinates[1],
+        vm.selectedMarker.location.loc.coordinates[0]
       ];
       centerLatLng(markerLatLng);
     }

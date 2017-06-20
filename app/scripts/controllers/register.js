@@ -18,18 +18,11 @@
       id: '',
       name: '',
       model: '',
-      boxType: 'fixed',
       sensors: [],
       tag: '',
       exposure: '',
       orderID: '',
-      loc: [{
-        'type':'feature',
-        'geometry': {
-          'type':'Point',
-          'coordinates':[]
-        }
-      }]
+      location: []
     };
     vm.modelSelected = {
       id: '',
@@ -226,8 +219,8 @@
       if (vm.ttnEnabled) {
         vm.newSenseBox.ttn = vm.ttn;
       }
-      vm.newSenseBox.loc[0].geometry.coordinates.push(vm.markers.box.lng);
-      vm.newSenseBox.loc[0].geometry.coordinates.push(vm.markers.box.lat);
+      vm.newSenseBox.location.push(vm.markers.box.lng);
+      vm.newSenseBox.location.push(vm.markers.box.lat);
       vm.registering = true;
       if (vm.modelSelected.id === 'custom') {
         for (var i = 0; i < vm.sensors.length; i++) {

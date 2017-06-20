@@ -123,8 +123,8 @@
       var marker = {
         layer: markerOpts.layer,
         icon: markerOpts.marker,
-        lng: obj.loc[0].geometry.coordinates[0],
-        lat: obj.loc[0].geometry.coordinates[1],
+        lng: obj.location.loc.coordinates[0],
+        lat: obj.location.loc.coordinates[1],
         opacity: markerOpts.opacity,
         riseOnHover: true,
         station: {
